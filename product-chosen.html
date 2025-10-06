@@ -196,7 +196,10 @@
                 <div class="product-image-box">
                     <img src="assets/cables.png" alt="Wiring cables">
                 </div>
-                <button class="btn btn-make" onclick="handleMake('Wiring cables')">Make</button>
+                <button class="btn btn-unavailable" disabled>
+                    Material unavailable
+                    <span class="unavailable-info">Requires 50g.</span>
+                </button>
             </div>
 
             <div class="product-card">
@@ -204,7 +207,10 @@
                 <div class="product-image-box">
                     <img src="assets/metal.png" alt="Metal alloys">
                 </div>
-                <button class="btn btn-make" onclick="handleMake('Metal alloys')">Make</button>
+                <button class="btn btn-unavailable" disabled>
+                    Material unavailable
+                    <span class="unavailable-info">Requires 50g.</span>
+                </button>
             </div>
 
             <div class="product-card">
@@ -212,17 +218,14 @@
                 <div class="product-image-box">
                     <img src="assets/parts.png" alt="General parts">
                 </div>
-                <button class="btn btn-unavailable" disabled>
-                    Material unavailable
-                    <span class="unavailable-info">Requires 50g.</span>
-                </button>
+                <button class="btn btn-make" onclick="handleMake('General Parts')">Make</button>
             </div>
         </div>
     </div>
 
     <script>
         function handleMake(productName) {
-    if (productName === 'Metal alloys') {
+    if (productName === 'Gears') {
         // Redireciona para a página process.html
         window.location.href = 'process.html';
     } else {
